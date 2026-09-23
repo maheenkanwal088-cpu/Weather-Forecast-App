@@ -1,0 +1,100 @@
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.urdu-font {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    line-height: 1.8;
+}
+
+/* Ultra Glassmorphism Tokens */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.glass-input {
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.glass-input:focus {
+    border-color: rgba(56, 189, 248, 0.6);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.35), inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom Dynamic Ambient Background Shifts */
+.theme-sunny {
+    background: radial-gradient(circle at 20% 20%, #0284c7 0%, #0f172a 60%, #020617 100%);
+}
+.theme-rainy {
+    background: radial-gradient(circle at 30% 20%, #1e3a8a 0%, #0f172a 65%, #020617 100%);
+}
+.theme-cloudy {
+    background: radial-gradient(circle at 70% 30%, #334155 0%, #0f172a 70%, #020617 100%);
+}
+.theme-thunderstorm {
+    background: radial-gradient(circle at 50% 10%, #581c87 0%, #0f172a 75%, #020617 100%);
+}
+.theme-snowy {
+    background: radial-gradient(circle at 50% 20%, #0891b2 0%, #0f172a 70%, #020617 100%);
+}
+
+/* Animations */
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.35; transform: scale(1); }
+    50% { opacity: 0.75; transform: scale(1.1); }
+}
+
+.animate-float {
+    animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-glow {
+    animation: pulseGlow 10s ease-in-out infinite;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 189, 248, 0.6);
+}
